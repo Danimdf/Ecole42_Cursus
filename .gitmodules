@@ -1,3 +1,9 @@
 [submodule "Get_Next_line_42"]
 	path = Get_Next_line_42
 	url = https://github.com/Danimdf/Get_Next_line_42.git
+[submodule "Libft"]
+	path = Libft
+	url = https://github.com/Danimdf/Libft.git
+[submodule "Printf"]
+	path = Printf
+	url = https://github.com/Danimdf/Printf.git
