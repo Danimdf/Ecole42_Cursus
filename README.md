@@ -5,20 +5,15 @@
 
 
 <h3 align="center">
-
-
 &#127756; 42 São Paulo &#127756;
 </h3>
 
 ---
 
+A community-based technology school. Totally free that has a project-based learning method where the student gains knowledge
+deeper into an issue through real-world challenges. It is learned by doing and evaluating other students, seeking an experience close to what it would be
+the creation of real projects.
 
-
-Uma escola de tecnologia feita em comunidade. Totalmente gratuita que possui um método de aprendizado baseado em projetos onde o estudante ganha um conhecimento 
-mais profundo a respeito de um assunto por meio de desafios do mundo real. Aprende-se fazendo e avaliando outros alunos, buscando uma experiência perto do que seria 
-a criação de projetos reais. 
-
----
 ## Projects &#128187;
 
 
@@ -29,6 +24,9 @@ Printf  |  100%  | &#10004;
 Born2BeRoot| 100%| &#10004;
 so_Long| &#10062;| &#10062;
 
+---
+ <h3 align="center">
+&#127756; Thank you and see you later!  &#127756;
+</h3>
 
- 
 
