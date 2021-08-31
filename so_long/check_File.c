@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_File.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/08/31 18:26:54 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/08/31 15:45:18 by dmonteir          #+#    #+#             */
+/*   Updated: 2021/08/31 15:51:18 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "so_long.h"
 
-int	main(int argc , char **argv)
+int	check_File(char *file, char *sufx)
 {
-	int check;
+	int	counter;
 
-	if (argc != 2)
-	printf("Error\n");
-		//exit(1);
+	counter = 0;
 
-	check = check_File(argv[1], "ber");
-
-	if (check == 1)
-	printf("Error1\n");
-		//exit(1);
-
-
+	while (file[counter + 1])
+		counter++;
+	while (counter >= 0 && file[counter] != '.')
+		counter--;
+	if (counter >= 0 && !ft_strcmp(file + counter + 1, sufx))
+		return (0);
+	return (1);
 }
+

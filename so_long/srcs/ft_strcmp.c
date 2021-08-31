@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/31 16:03:44 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/08/31 18:26:54 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/08/31 16:58:17 by dmonteir          #+#    #+#             */
+/*   Updated: 2021/08/31 17:05:55 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "so_long.h"
+#include "../so_long.h"
 
-int	main(int argc , char **argv)
+int ft_strcmp(const char *str1, const char *str2)
 {
-	int check;
+	int counter;
 
-	if (argc != 2)
-	printf("Error\n");
-		//exit(1);
+	counter = 0;
 
-	check = check_File(argv[1], "ber");
-
-	if (check == 1)
-	printf("Error1\n");
-		//exit(1);
-
-
+	while ((unsigned char)str1[counter] == (unsigned char)str2[counter] && str1[counter])
+		counter++;
+	return ((unsigned char)str1[counter] - (unsigned char)str2[counter]);
 }
