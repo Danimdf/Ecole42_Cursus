@@ -10,6 +10,10 @@ INCLIB = $(INC)/../minilibx-linux
 FILES = main.c \
 		check_File.c \
 		./srcs/ft_strcmp.c \
+		columns.c \
+		./gnl/get_next_line.c \
+		this_Read.c \
+
 
 
 
