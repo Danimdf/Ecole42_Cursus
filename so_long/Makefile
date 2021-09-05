@@ -6,12 +6,14 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 INCLIB = $(INC)/../minilibx-linux
+INCLUDE = ./include
 
 FILES = main.c \
 		check_File.c \
 		./srcs/ft_strcmp.c \
 		columns.c \
 		./gnl/get_next_line.c \
+		./gnl/get_next_line_utils.c \
 		this_Read.c \
 
 
@@ -24,7 +26,7 @@ RM = rm -f
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(FILES) $(LFLAGS)
+	$(CC) $(CFLAGS) -I $(INCLUDE) -o $(NAME) $(FILES) $(LFLAGS)
 
 clean:
 		$(RM) $(OBJS)

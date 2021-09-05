@@ -6,36 +6,37 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:22:15 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/03 15:23:44 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/05 16:34:41 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	**columns(char *file, t_game *game)
+char		**columns(char *file)
 {
-	char	**map;
+	int		count;
 	int		fd;
-	int		read;
-	char	char;
+	int		read_line;
+	char	c;
+	char	**map;
 
 	fd = open(file, O_RDONLY);
 	if (!fd)
-		return (-1);
-	game->map_Lines->count = 1;
-	while (game->map_Lines->count)
+		return (NULL);
+	count = 1;
+	while (count)
 	{
-		read = read(fc, &char, 1);
-		if (read <= 0)
-			return (-1);
-		if (char == '\n')
-			game->map_Lines->count++;
+		read_line = read(fd, &c, 1);
+		if (read_line <= 0)
+			return (NULL);
+		if (c == '\n')
+			count++;
 	}
 	close(fd);
-	if (game->map_Lines->count <= 0)
-		printf("ERROR!\n");
-	map = calloc(sizeof(char *) * game->map_Lines->count) + 1);
+	if (count <= 0)
+		printf("ERROR!1\n");
+	map = (char **)ft_calloc(count + 1, sizeof(char));
 	if (map == NULL)
-		printf("ERROR!\n");
+		printf("ERROR!2\n");
 	return (map);
 }
