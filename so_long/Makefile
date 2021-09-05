@@ -26,7 +26,7 @@ RM = rm -f
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	$(CC) $(CFLAGS) -I $(INCLUDE) -o $(NAME) $(FILES) $(LFLAGS)
+	$(CC) -g $(CFLAGS) -I $(INCLUDE) -o $(NAME) $(FILES) $(LFLAGS)
 
 clean:
 		$(RM) $(OBJS)
