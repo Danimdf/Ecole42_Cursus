@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 12:51:03 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/06/28 12:19:02 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/05 20:54:53 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*new_line(char *temp, char **line, int i)
 		counter++;
 	if (temp[counter] == '\n')
 	{
-		*line = ft_substr(temp, 0, counter);
+		*line = ft_substr(temp, 0, counter + 1);
 		excess = ft_strdup(&((temp)[counter + 1]));
 		free(temp);
 	}

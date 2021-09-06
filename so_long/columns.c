@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:22:15 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/05 20:26:23 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/05 20:57:36 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char		**columns(char *file)
 	close(fd);
 	if (count <= 0)
 		printf("ERROR!1\n");
-	map = (char **)ft_calloc(count + 1, sizeof(char));
+	map = (char **)ft_calloc(count + 1, sizeof(char *));
 	if (map == NULL)
 		printf("ERROR!2\n");
 	return (map);
