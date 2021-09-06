@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/05 18:34:07 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/05 23:15:58 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,25 @@ char	**this_Read(char *file)
 	char	**map;
 	int		index;
 	int		fd;
+	int gnl;
 
 
 	map = columns(file);
 	if (map == NULL)
+	{
 		printf("ERROR!miau\n");
+		exit (1);
+	}
 	fd = open(file, O_RDONLY);
 
 	index = 0;
-
-	while (get_next_line(fd, &map[index++]));
-
-	while (map[index] != NULL)
-	{
-		printf("%s",map[index]);
-		index++;
-	}
+	gnl = 1;
+	while (gnl)
+		gnl = get_next_line(fd, &map[index++]);
 
 	map[index] = NULL;
 
 	close(fd);
 
 	return (map);
-
 }

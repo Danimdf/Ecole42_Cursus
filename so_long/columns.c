@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:22:15 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/05 20:57:36 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/05 23:00:39 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,16 @@ char		**columns(char *file)
 	if (!fd)
 		return (NULL);
 
-	check_File(file, "ber");
-
-	if (fd == 1)
+	if (!check_File(file, "ber"))
 	{
 		printf("Error1000\n");
-		//exit(1);
+		exit (1);
 	}
 
-	count = 1;
+	count = 0;
 	read_line = 1;
 	while (read_line)
 	{
-
 		read_line = read(fd, &c, 1);
 		if (read_line < 0)
 			return (NULL);
@@ -45,7 +42,7 @@ char		**columns(char *file)
 			count++;
 	}
 	close(fd);
-	if (count <= 0)
+	if (count < 0)
 		printf("ERROR!1\n");
 	map = (char **)ft_calloc(count + 1, sizeof(char *));
 	if (map == NULL)
