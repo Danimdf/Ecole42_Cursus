@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   this_Read.c                                        :+:      :+:    :+:   */
+/*   ft_valid.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/08 21:57:51 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/09/10 11:08:07 by dmonteir          #+#    #+#             */
+/*   Updated: 2021/09/10 11:09:04 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-char	**this_Read(char *file)
+int	ft_valid(char **map, t_game *game)
 {
-	char	**map;
-	int		index;
-	int		fd;
-	int gnl;
 
-	map = columns(file);
-	if (map == NULL)
-	{
-		printf("ERROR!miau\n");
-		exit (1);
-	}
-	fd = open(file, O_RDONLY);
-	index = 0;
-	gnl = 1;
-	while (gnl)
-		gnl = get_next_line(fd, &map[index++]);
-	map[index] = NULL;
-
-	close(fd);
-	return (map);
 }

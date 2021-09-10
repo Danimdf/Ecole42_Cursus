@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/05 16:02:51 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/10 09:51:59 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,31 +24,45 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-typedef struct s_map
-{
-	int		count;
 
-}	t_map;
+
+typedef struct s_obj
+{
+	int		x;
+	int		y;
+	int		size_x;
+	int		size_y;
+	int		player;
+	int		item;
+	int		exit;
+
+}	t_obj;
 
 typedef struct s_game
 {
-	t_map *map_Lines;
-
+	t_obj *obj;
 }	t_game;
 
 
 
-
+int	main(int argc, char **argv);
 
 int	check_File(char *file, char *sufx);
 
 char	**this_Read(char *file);
 
-char		**columns(char *file);
+int	valid_Map (char **map, t_game *game);
 
-int	main(int argc, char **argv);
+char	**columns(char *file);
 
+void	ft_free_matriz(char **matriz);
+
+int	ft_count_line(char **matriz);
+
+//libft
 int ft_strcmp(const char *str1, const char *str2);
+void	*ft_memset(void *str, int c, size_t n);
+
 
 
 

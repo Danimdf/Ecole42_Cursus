@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   this_Read.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/08 21:57:51 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/05/21 13:25:45 by dmonteir          #+#    #+#             */
+/*   Updated: 2021/09/10 09:44:56 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-char	**this_Read(char *file)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	char	**map;
-	int		index;
-	int		fd;
-	int gnl;
+	size_t			i;
+	unsigned char	*ptr;
 
-	map = columns(file);
-	if (map == NULL)
+	ptr = (unsigned char *)str;
+	i = 0;
+	while (i < n)
 	{
-		printf("ERROR!miau\n");
-		exit (1);
+		ptr[i++] = c;
 	}
-	fd = open(file, O_RDONLY);
-	index = 0;
-	gnl = 1;
-	while (gnl)
-		gnl = get_next_line(fd, &map[index++]);
-	map[index] = NULL;
-
-	close(fd);
-	return (map);
+	return (str);
 }

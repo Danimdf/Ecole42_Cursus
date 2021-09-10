@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   this_Read.c                                        :+:      :+:    :+:   */
+/*   ft_count_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/08 21:57:51 by dmonteir         ###   ########.fr       */
+/*   Created: 2021/09/09 10:34:59 by dmonteir          #+#    #+#             */
+/*   Updated: 2021/09/09 11:42:28 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-char	**this_Read(char *file)
+int	ft_count_line(char **matriz)
 {
-	char	**map;
-	int		index;
-	int		fd;
-	int gnl;
+	int	counter;
 
-	map = columns(file);
-	if (map == NULL)
+	counter = 0;
+	while (matriz[counter])
+		counter++;
+	return (counter);
+}
+
+void ft_free_matriz(char **matriz)
+{
+	int counter;
+
+	counter = 0;
+	while (matriz[counter])
 	{
-		printf("ERROR!miau\n");
-		exit (1);
+		free (matriz[counter]);
+		counter++;
 	}
-	fd = open(file, O_RDONLY);
-	index = 0;
-	gnl = 1;
-	while (gnl)
-		gnl = get_next_line(fd, &map[index++]);
-	map[index] = NULL;
-
-	close(fd);
-	return (map);
+	free(matriz);
 }

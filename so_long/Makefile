@@ -2,7 +2,7 @@
 INC=%%%%
 
 NAME = so_long
-CC = gcc
+CC = clang
 CFLAGS = -Wall -Wextra -Werror
 
 INCLIB = $(INC)/../minilibx-linux
@@ -10,8 +10,11 @@ INCLUDE = ./include
 
 FILES = main.c \
 		check_File.c \
-		./srcs/ft_strcmp.c \
+		./utils/ft_strcmp.c \
+		./utils/ft_memset.c \
 		columns.c \
+		valid_Map.c \
+		ft_count_line.c \
 		./gnl/get_next_line.c \
 		./gnl/get_next_line_utils.c \
 		this_Read.c \
