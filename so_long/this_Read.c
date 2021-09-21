@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/08 21:57:51 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/14 20:18:16 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	**this_Read(char *file)
 	char	**map;
 	int		index;
 	int		fd;
-	int gnl;
+	int		gnl;
 
 	map = columns(file);
 	if (map == NULL)

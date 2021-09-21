@@ -14,6 +14,7 @@ FILES = main.c \
 		./utils/ft_memset.c \
 		columns.c \
 		valid_Map.c \
+		ft_valid.c \
 		ft_count_line.c \
 		./gnl/get_next_line.c \
 		./gnl/get_next_line_utils.c \

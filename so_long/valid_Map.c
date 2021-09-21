@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 23:27:34 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/10 11:13:18 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/14 19:47:42 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	valid_Map (char **map, t_game *game)
 		game->obj->x = 0;
 		while (map[game->obj->y][game->obj->x])
 		{
-			if (ft_valid(map, &game) == 0)
+			if (ft_valid(map, game) == 0)
 			{
 				bool_Value = 0;
 				printf("map not valid!");

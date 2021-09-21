@@ -6,11 +6,22 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 11:08:07 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/10 13:22:34 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/09/14 19:49:12 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+
+
+int valid_border(char c, t_game *game)
+{
+	if (game->obj->x == 0 || game->obj->y == 0 || game->obj->x == game->obj->size_x - 1 || game->obj->y == game->obj->size_y -1)
+		if(c != '1')
+			return (0);
+	return (1);
+}
+
 
 int	valid_Obj(char c)
 {
@@ -29,4 +40,7 @@ int	ft_valid(char **map, t_game *game)
 
 	if(!valid_Obj(map[x][y]))
 		return (0);
+	if(!valid_border(map[x][y], game))
+		return (0);
+	return (1);
 }
