@@ -7,3 +7,6 @@
 [submodule "Printf"]
 	path = Printf
 	url = https://github.com/Danimdf/Printf.git
+[submodule "do_long"]
+	path = do_long
+	url = https://github.com/Danimdf/so_long.git
