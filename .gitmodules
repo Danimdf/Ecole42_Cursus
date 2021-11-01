@@ -10,3 +10,6 @@
 [submodule "do_long"]
 	path = do_long
 	url = https://github.com/Danimdf/so_long.git
+[submodule "so_long"]
+	path = so_long
+	url = https://github.com/Danimdf/so_long.git
