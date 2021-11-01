@@ -6,14 +6,13 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 12:53:02 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/05 15:55:24 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/10/06 19:12:37 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFFER_SIZE 100
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -21,6 +20,8 @@
 # include <sys/param.h>
 # include <sys/resource.h>
 # include <fcntl.h>
+
+# define BUFFER_SIZE 100
 
 int				get_next_line(int fd, char **line);
 size_t			ft_strlen(const char *s);

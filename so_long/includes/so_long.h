@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:46:42 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/10 17:42:33 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/10/28 21:25:15 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 
 
-#include "./gnl/get_next_line.h"
+#include "../gnl/get_next_line.h"
 #include <mlx.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -23,24 +23,20 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#define true 1
+#define false 0
 
 
-
-typedef struct s_obj
+typedef struct s_map
 {
-	int		x;
-	int		y;
-	int		size_x;
-	int		size_y;
-	int		player;
-	int		item;
-	int		exit;
-
-}	t_obj;
+	int		row;
+	int		col;
+	char	**map;
+}	t_map;
 
 typedef struct s_game
 {
-	t_obj *obj;
+	t_map	obj_map;
 }	t_game;
 
 
@@ -49,20 +45,17 @@ int	main(int argc, char **argv);
 
 int	check_File(char *file, char *sufx);
 
-char	**this_Read(char *file);
+char	**this_Read(char *file, t_game *game);
+
+int this_CheckWalls (t_game *game);
+
+char	**columns(char *file, t_game *game);
 
 
-
-char	**columns(char *file);
-
-void	ft_free_matriz(char **matriz);
 
 int	ft_count_line(char **matriz);
 
-//validation
-int	valid_Map (char **map, t_game *game);
-int	ft_valid(char **map, t_game *game);
-int	valid_Obj(char c);
+void	ft_free_matriz(char **matriz);
 
 //libft
 int ft_strcmp(const char *str1, const char *str2);

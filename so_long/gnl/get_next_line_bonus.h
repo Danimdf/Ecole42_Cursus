@@ -6,7 +6,7 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 14:57:57 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/06/28 12:54:37 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/10/06 19:12:29 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <stdlib.h>
 # include <ctype.h>
 # include <limits.h>
+
 
 int				get_next_line(int fd, char **line);
 size_t			ft_strlen(const char *s);

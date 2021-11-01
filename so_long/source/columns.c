@@ -6,19 +6,17 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 14:22:15 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/05 23:00:39 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/10/28 21:01:49 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
-char		**columns(char *file)
+char		**columns(char *file, t_game *game)
 {
-	int		count;
 	int		fd;
 	int		read_line;
 	char	c;
-	char	**map;
 
 	fd = open(file, O_RDONLY);
 	if (!fd)
@@ -29,23 +27,21 @@ char		**columns(char *file)
 		printf("Error1000\n");
 		exit (1);
 	}
-
-	count = 0;
+	game->obj_map.row = 1;
 	read_line = 1;
 	while (read_line)
 	{
 		read_line = read(fd, &c, 1);
 		if (read_line < 0)
 			return (NULL);
-
 		if (c == '\n')
-			count++;
+			game->obj_map.row++;
 	}
 	close(fd);
-	if (count < 0)
+	if (game->obj_map.row < 0)
 		printf("ERROR!1\n");
-	map = (char **)ft_calloc(count + 1, sizeof(char *));
-	if (map == NULL)
+	game->obj_map.map = (char **)ft_calloc(game->obj_map.row + 1, sizeof(char *));
+	if (game->obj_map.map == NULL)
 		printf("ERROR!2\n");
-	return (map);
+	return (game->obj_map.map);
 }

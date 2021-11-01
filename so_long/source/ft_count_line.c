@@ -6,11 +6,11 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 10:34:59 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/09 11:42:28 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/10/19 19:36:22 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 int	ft_count_line(char **matriz)
 {

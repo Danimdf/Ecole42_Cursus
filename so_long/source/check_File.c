@@ -6,11 +6,11 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 15:45:18 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/20 21:30:36 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/10/19 19:36:12 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
 int	check_File(char *file, char *sufx)
 {

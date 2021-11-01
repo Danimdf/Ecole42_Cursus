@@ -8,17 +8,18 @@ CFLAGS = -Wall -Wextra -Werror
 INCLIB = $(INC)/../minilibx-linux
 INCLUDE = ./include
 
+//OBJS = $(FILES:.c=.o)
+
 FILES = main.c \
-		check_File.c \
+		./source/check_File.c \
 		./utils/ft_strcmp.c \
 		./utils/ft_memset.c \
-		columns.c \
-		valid_Map.c \
-		ft_valid.c \
-		ft_count_line.c \
+		./source/columns.c \
+		./source/ft_count_line.c \
 		./gnl/get_next_line.c \
 		./gnl/get_next_line_utils.c \
-		this_Read.c \
+		./source/this_Read.c \
+		./source/this_CheckWalls.c
 
 
 
@@ -29,7 +30,7 @@ RM = rm -f
 
 all:	$(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME):	$(OBJS)
 	$(CC) -g $(CFLAGS) -I $(INCLUDE) -o $(NAME) $(FILES) $(LFLAGS)
 
 clean:

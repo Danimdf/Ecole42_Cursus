@@ -6,21 +6,20 @@
 /*   By: dmonteir <dmonteir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:17:27 by dmonteir          #+#    #+#             */
-/*   Updated: 2021/09/14 20:18:16 by dmonteir         ###   ########.fr       */
+/*   Updated: 2021/10/28 21:05:39 by dmonteir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../includes/so_long.h"
 
-char	**this_Read(char *file)
+char	**this_Read(char *file, t_game *game)
 {
-	char	**map;
 	int		index;
 	int		fd;
 	int		gnl;
 
-	map = columns(file);
-	if (map == NULL)
+	game->obj_map.map = columns(file, &*game);
+	if (game->obj_map.map == NULL)
 	{
 		printf("ERROR!miau\n");
 		exit (1);
@@ -29,9 +28,15 @@ char	**this_Read(char *file)
 	index = 0;
 	gnl = 1;
 	while (gnl)
-		gnl = get_next_line(fd, &map[index++]);
-	map[index] = NULL;
-
+		gnl = get_next_line(fd, &game->obj_map.map[index++]);
+	game->obj_map.map[index] = NULL;
+	game->obj_map.col = ft_strlen (game->obj_map.map[0]);
+	/*int i;
+	i = 0;
+	while (i < index)
+	{
+		printf("%s", game->obj_map.map[i++]);
+	}*/
 	close(fd);
-	return (map);
+	return (game->obj_map.map);
 }
