@@ -13,3 +13,6 @@
 [submodule "so_long"]
 	path = so_long
 	url = https://github.com/Danimdf/so_long.git
+[submodule "Pipex"]
+	path = Pipex
+	url = https://github.com/Danimdf/Pipex.git
