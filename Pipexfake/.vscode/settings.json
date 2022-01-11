@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"wait.h": "c",
+		"*.tcc": "c",
+		"fstream": "c",
+		"pipex.h": "c"
+	}
+}
