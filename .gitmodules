@@ -16,3 +16,6 @@
 [submodule "Pipex"]
 	path = Pipex
 	url = https://github.com/Danimdf/Pipex.git
+[submodule "Push_Swap"]
+	path = Push_Swap
+	url = https://github.com/Danimdf/Push_Swap.git
