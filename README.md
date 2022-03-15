@@ -24,7 +24,7 @@ Printf  |  100%  | &#10004;
 Born2BeRoot| 100%| &#10004;
 so_Long| 100 %| &#10004;
 Pipex | 100% | &#10004;
-Push_swap | &#10062; | &#10062;
+Push_swap | 84% | &#10004;
 
 ---
  <h3 align="center">
