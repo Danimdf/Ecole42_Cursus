@@ -14,8 +14,9 @@ A community-based technology school. Totally free that has a project-based learn
 deeper into an issue through real-world challenges. It is learned by doing and evaluating other students, seeking an experience close to what it would be
 the creation of real projects.
 
+<h3 align="center">
 ## Projects &#128187;
-
+</h3>
 
 Libft   |  115%  |&#10004;
 :-------| :-----:| ------:
