@@ -15,7 +15,7 @@ deeper into an issue through real-world challenges. It is learned by doing and e
 the creation of real projects.
 
 <h3 align="center">
-## Projects &#128187;
+    Projects &#128187;
 </h3>
 
 Libft   |  115%  |&#10004;
