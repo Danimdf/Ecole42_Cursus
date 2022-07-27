@@ -19,3 +19,6 @@
 [submodule "Push_Swap"]
 	path = Push_Swap
 	url = https://github.com/Danimdf/Push_Swap.git
+[submodule "minishell"]
+	path = minishell
+	url = https://github.com/lamorim42/minishell.git
