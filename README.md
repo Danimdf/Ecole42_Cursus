@@ -26,7 +26,7 @@ Born2BeRoot| 100%| &#10004;
 so_Long| 100%| &#10004;
 Pipex | 100% | &#10004;
 Push_swap | 84% | &#10004;
-
+Minishell | 100% | &#10004;
 ---
  <h3 align="center">
 &#127756; Thank you and see you later!  &#127756;
