@@ -29,6 +29,7 @@ Push_swap | 84% | &#10004;
 Minishell | 100% | &#10004;
 Philosophers | 100% | &#10004;
 NetPratice | 100% | &#10004;
+Cub3d | 115% | &#10004;
 ---
  <h3 align="center">
 &#127756; Thank you and see you later!  &#127756;
